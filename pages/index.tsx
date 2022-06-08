@@ -1,7 +1,7 @@
 import matter from "gray-matter"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import Link from 'next/link'
-import Home from '../components/home'
+import Owner from '../components/owner'
 import Links from '../components/links'
 
 export async function getStaticProps() {
@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
   const postsSorted = posts.sort((a, b) =>
     b.meta.id - a.meta.id
-  )
+  ).reverse()
 
   return {
     props: {
@@ -31,27 +31,24 @@ export async function getStaticProps() {
   }
 }
 
-export default function Index({ posts }) {
-  return <Tabs>
-    <TabList>
-      <Tab><h2>HOME</h2></Tab>
-      <Tab><h2>LINKS</h2></Tab>
-      <Tab><h2>POSTS</h2></Tab>
-    </TabList>
+export default ({ posts }) => <Tabs>
+  <TabList>
+    <Tab><h2>OWNER</h2></Tab>
+    <Tab><h2>LINKS</h2></Tab>
+    <Tab><h2>POSTS</h2></Tab>
+  </TabList>
 
-    <TabPanel><Home /></TabPanel>
+  <TabPanel><Owner /></TabPanel>
 
-    <TabPanel><Links /></TabPanel>
+  <TabPanel><Links /></TabPanel>
 
-    <TabPanel>
-      {posts.map(post =>
-        <section>
-          <h3>
-            <Link href={`../posts/${post.slug}`} >{post.meta.date}</Link> {post.meta.title}
-          </h3>
-          {post.content}
-        </section>
-      )}
-    </TabPanel>
-  </Tabs >
-}
+  <TabPanel>
+    {posts.map(post =>
+      <section>
+        <h3>
+          <Link href={`../posts/${post.slug}`} >{post.meta.date}</Link> {post.meta.title}
+        </h3>
+      </section>
+    )}
+  </TabPanel>
+</Tabs>

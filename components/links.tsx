@@ -1,12 +1,11 @@
 import Link from 'next/link'
 
-export default function Links() {
+export default () => {
   return <ul>
-    <li>website
+    <li>舊網站
       <ul>
         <li><Link href='https://0.sumi.space'>12018 (Gulp, Pug)</Link></li>
         <li><Link href='https://www.sumi.space'>12021 (Next.js)</Link></li>
-        <li>12022 (Next.js)</li>
       </ul>
     </li>
     <li><Link href='https://sjagci.pages.dev'>將棋 (Elm)</Link></li>

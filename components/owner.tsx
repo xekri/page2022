@@ -1,7 +1,7 @@
-export default function Home() {
+export default () => {
   return <>
     <div style={{ textAlign: 'center' }}>
-      <img src='avatar.gif' alt='avatar' width='200px' style={{ borderRadius: '50%', border: '1px solid' }} />
+      <img src='/avatar.gif' alt='avatar' width='200px' style={{ borderRadius: '50%', border: '1px solid' }} />
     </div>
 
     <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>

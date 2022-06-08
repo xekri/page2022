@@ -1,17 +1,18 @@
 import matter from "gray-matter"
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import { NextSeo } from 'next-seo'
 
-export default function Post(props) {
-  return <>
-    <h2>POSTS</h2>
-    <section>
-      <h3>{props.meta.date} «{props.meta.title}»</h3>
-      <ReactMarkdown>
-        {props.content}
-      </ReactMarkdown>
-    </section >
-  </>
-}
+export default (props) => <>
+  <h2>POSTS</h2>
+  <section>
+    <h3><a href=''>{props.meta.date}</a> {props.meta.title}</h3>
+    <NextSeo title={props.meta.title} />
+    <ReactMarkdown remarkPlugins={[remarkGfm]} >
+      {props.content}
+    </ReactMarkdown>
+  </section>
+</>
 
 export async function getStaticPaths() {
   const slugs = (context => {

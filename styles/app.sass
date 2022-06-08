@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500&family=Source+Code+Pro:wght@300&display=swap')
 
 *
   box-sizing: border-box
@@ -25,6 +25,12 @@ body
     box-sizing: border-box
     border-top: 1px solid
     border-left: 1px solid
+
+code
+  font-family: 'Source Code Pro', 'Noto Sans Mono', monospace
+  background-color: #FFF2
+  padding-left: .25em
+  padding-right: .25em
 
 h1, h2, h3, h4, h5, h6
   margin: 0
@@ -93,7 +99,13 @@ section
 table
   border-collapse: collapse
   border: 1px solid
+  margin-left: auto
+  margin-right: auto
   tr
+    &:first-of-type
+      th
+        writing-mode: vertical-lr
+
     th
       text-align: right
     td
@@ -106,3 +118,7 @@ table
 .twitter-tweet
   max-width: 250px !important
   margin: 0 !important
+
+hr
+  height: 1px
+  border-color: #FFF2
