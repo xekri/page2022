@@ -1,5 +1,5 @@
 import { TwitterTweetEmbed } from 'react-twitter-embed'
-import style from './1.module.sass';
+import style from './style.module.sass';
 
 export default () => <>
   <h2>SUZULI & MITULU</h2>
@@ -53,7 +53,7 @@ export default () => <>
         <td>80</td>
       </tr>
       <tr>
-        <th>{"{髮, 目}"}色</th>
+        <th>髮色</th>
         <td>薄灰色</td>
         <td>黒色</td>
       </tr>
@@ -100,7 +100,7 @@ export default () => <>
       </tr>
       <tr>
         <th>愛讀書</th>
-        <td>«生誕の災厄»</td>
+        <td>«better never to have been»</td>
         <td>«存在と無»</td>
       </tr>
       <tr>
@@ -126,7 +126,6 @@ export default () => <>
             <li>リバだが凹を好む</li>
             <li>首を絞められたがる</li>
             <li>性行爲中は甘えたがり</li>
-            <li>稀に喫煙する</li>
             <li>大麻とLSDを好む</li>
           </ul>
         </td>
@@ -134,7 +133,7 @@ export default () => <>
           <ul>
             <li>自淫は平均.5回/日</li>
             <li>リバだが凹を好む</li>
-            <li>乳頭が敏感</li>
+            <li>乳頭が弱い</li>
             <li>寂しがり</li>
             <li>酒精に弱い</li>
           </ul>

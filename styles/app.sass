@@ -10,7 +10,7 @@ body
   margin: 0
   color: white
   background-color: black
-  font-family: 'Zen Kaku Gothic new', sans-serif
+  font-family: 'Zen Kaku Gothic New', sans-serif
   font-weight: 300
   padding: 1em
 
@@ -27,7 +27,7 @@ body
     border-left: 1px solid
 
 code
-  font-family: 'Source Code Pro', 'Noto Sans Mono', monospace
+  font-family: 'Source Code Pro', monospace
   background-color: #FFF2
   padding-left: .25em
   padding-right: .25em
@@ -101,6 +101,7 @@ table
   border: 1px solid
   margin-left: auto
   margin-right: auto
+  max-width: 80%
   tr
     &:first-of-type
       th
@@ -114,6 +115,12 @@ table
       border: 1px solid #FFF2
       padding: .5em
       word-wrap: normal
+
+      &[colspan]
+        text-align: center
+
+      &[rowspan]
+        vertical-align: middle
 
 .twitter-tweet
   max-width: 250px !important

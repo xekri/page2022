@@ -62,21 +62,21 @@ export default () => <>
         <th>主</th>
         <td>io</td>
         <td>tu</td>
-        <td rowSpan='2'>ille</td>
-        <td rowSpan='2'>illa</td>
-        <td rowSpan='2'>illo</td>
+        <td rowSpan={2}>ille</td>
+        <td rowSpan={2}>illa</td>
+        <td rowSpan={2}>illo</td>
         <td>il</td>
-        <td rowSpan='4'>nos</td>
-        <td rowSpan='4'>vos</td>
-        <td rowSpan='2'>illes</td>
-        <td rowSpan='2'>illas</td>
-        <td rowSpan='2'>illos</td>
+        <td rowSpan={4}>nos</td>
+        <td rowSpan={4}>vos</td>
+        <td rowSpan={2}>illes</td>
+        <td rowSpan={2}>illas</td>
+        <td rowSpan={2}>illos</td>
       </tr>
       <tr>
         <th>所</th>
-        <td rowSpan='2'>me</td>
-        <td rowSpan='2'>te</td>
-        <td rowSpan='2'></td>
+        <td rowSpan={2}>me</td>
+        <td rowSpan={2}>te</td>
+        <td rowSpan={2}></td>
       </tr>
       <tr>
         <th>斜</th>

@@ -1,9 +1,10 @@
 import { TwitterTweetEmbed } from 'react-twitter-embed'
+import style from './style.module.sass';
 
 export default () => <>
   <h2>LON</h2>
 
-  <div className='tweets'>
+  <div className={style.tweets}>
     <TwitterTweetEmbed tweetId='1425831886060802056' options={{ theme: "dark" }} />
     <TwitterTweetEmbed tweetId='1429464857263239174' options={{ theme: "dark" }} />
     <TwitterTweetEmbed tweetId='1469924091708993536' options={{ theme: "dark" }} />

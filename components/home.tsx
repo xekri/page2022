@@ -1,4 +1,6 @@
-export default () => {
+import Link from 'next/link'
+
+export const Owner = () => {
   return <>
     <div style={{ textAlign: 'center' }}>
       <img src='/avatar.gif' alt='avatar' width='200px' style={{ borderRadius: '50%', border: '1px solid' }} />
@@ -12,7 +14,7 @@ export default () => {
             <li>TOEIC L&R 810/990 (2017): B2相當</li>
             <li>英檢 準1級 2555/3000 (2021): B2相當</li>
             <li>HSK 4級 235/300 (2021): A2相當</li>
-            <li>FR, YUE: A1未滿</li>
+            <li>FA, FR, YUE: A1未滿</li>
           </ul>
         </li>
         <li>男性愛者</li>
@@ -35,3 +37,24 @@ export default () => {
     </div>
   </>
 }
+
+export const Links = () => <ul>
+  <li>舊網站
+    <ul>
+      <li><Link href='https://0.sumi.space'>12018 (Gulp, Pug)</Link></li>
+      <li><Link href='https://www.sumi.space'>12021 (Next.js)</Link></li>
+    </ul>
+  </li>
+  <li><Link href='https://sjagci.pages.dev'>將棋 (Elm)</Link></li>
+  <li><Link href='https://sumi-yue.herokuapp.com'>粵語ラテン化</Link></li>
+  <li><Link href='https://lingua.sumi.space'>ラテン化</Link></li>
+</ul>
+
+export const Misc = () => <ul>
+  <li>original characters
+    <ul>
+      <li><Link href='char/1'>suzuli, mitulu</Link></li>
+      <li><Link href='char/2'>lon</Link></li>
+    </ul>
+  </li>
+</ul>
