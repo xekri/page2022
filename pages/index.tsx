@@ -1,7 +1,7 @@
 import matter from "gray-matter"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import Link from 'next/link'
-import { Owner, Links, Misc } from '../components/home'
+import { Owner, Works, Misc } from '../components/home'
 
 export async function getStaticProps() {
   const posts = (context => {
@@ -33,13 +33,13 @@ export async function getStaticProps() {
 export default ({ posts }) => <Tabs>
   <TabList>
     <Tab><h2>OWNER</h2></Tab>
-    <Tab><h2>LINKS</h2></Tab>
+    <Tab><h2>WORKS</h2></Tab>
     <Tab><h2>MISC</h2></Tab>
     <Tab><h2>POSTS</h2></Tab>
   </TabList>
 
   <TabPanel><Owner /></TabPanel>
-  <TabPanel><Links /></TabPanel>
+  <TabPanel><Works /></TabPanel>
   <TabPanel><Misc /></TabPanel>
   <TabPanel>
     {posts.map(post =>

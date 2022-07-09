@@ -18,7 +18,7 @@ export const Owner = () => {
           </ul>
         </li>
         <li>男性愛者</li>
-        <li>自由主義者</li>
+        <li>(特に表現の) 近代自由主義者</li>
       </ul>
     </div>
 
@@ -38,7 +38,7 @@ export const Owner = () => {
   </>
 }
 
-export const Links = () => <ul>
+export const Works = () => <ul>
   <li>舊網站
     <ul>
       <li><Link href='https://0.sumi.space'>12018 (Gulp, Pug)</Link></li>
@@ -46,7 +46,6 @@ export const Links = () => <ul>
     </ul>
   </li>
   <li><Link href='https://sjagci.pages.dev'>將棋 (Elm)</Link></li>
-  <li><Link href='https://sumi-yue.herokuapp.com'>粵語ラテン化</Link></li>
   <li><Link href='https://lingua.sumi.space'>ラテン化</Link></li>
 </ul>
 
@@ -57,4 +56,5 @@ export const Misc = () => <ul>
       <li><Link href='char/2'>lon</Link></li>
     </ul>
   </li>
+  <li><Link href='fav'>favourites</Link></li>
 </ul>
