@@ -6,7 +6,7 @@ export default () => <>
   <h2>{title}</h2>
 
   <section>
-    <h3>思想</h3>
+    <h3>文獻</h3>
     <ul>
       <li>2007 <a href='https://cruel.org/economist/courier200712.html'>自由のためなら人が死んでもいい</a></li>
       <li>2007 <a href='https://www.amazon.co.jp/dp/4815805997'>動物からの倫理学入門</a></li>
