@@ -1,13 +1,25 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
-import style from './style.module.sass';
+import { NextSeo } from 'next-seo'
+import style from './style.module.sass'
 
+const title = 'SUZULI & MITULU'
 export default () => <>
-  <h2>SUZULI & MITULU</h2>
-  <section>
-    <h3>IMAGE</h3>
-    (工事中)
-  </section>
-
+  <NextSeo
+    title={title}
+    originGraph={{
+      images: [{
+        url: '/char-1/20220716-bk.png'
+      }]
+    }}
+  />
+  <h2>{title}</h2>
+  <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+    <Link href='/char-1/20220716-bk.png'>
+      <img src='/char-1/20220716-bk.png' style={{ width: '50%', backgroundImage: 'linear-gradient(transparent, transparent, #FFF4)' }} />
+    </Link>
+  </div>
   <section>
     <h3>SPECIFICATION</h3>
 
@@ -29,13 +41,9 @@ export default () => <>
         <td>盈 (mitulu)</td>
       </tr>
       <tr>
-        <th>寫眞</th>
-        <td style={{ textAlign: 'center' }}>
-          <TwitterTweetEmbed tweetId="1346045769820749824" options={{ theme: "dark" }} />
-        </td>
-        <td style={{ textAlign: 'center' }}>
-          <TwitterTweetEmbed tweetId="1314648291636703232" options={{ theme: "dark" }} />
-        </td>
+        <th>外見</th>
+        <td>上圖右</td>
+        <td>上圖左</td>
       </tr>
       <tr>
         <th>年齡</th>
@@ -59,12 +67,12 @@ export default () => <>
       </tr>
       <tr>
         <th>所在</th>
-        <td colSpan={2}>日本 / 武蔵縣</td>
+        <td colSpan={2}>日本共和國 / 武蔵縣</td>
       </tr>
       <tr>
         <th>身分</th>
-        <td>葦原大學大學院生 (計算機科學)</td>
-        <td>葦原大學學部生 (數學)</td>
+        <td>葦原大學大學院 情報科學院 理論計算機科專攻</td>
+        <td>葦原大學 理學部 數學科</td>
       </tr>
       <tr>
         <th>性</th>
@@ -79,7 +87,7 @@ export default () => <>
       <tr>
         <th>言語</th>
         <td>日本語 (東京方言), 英語 (general american), 粵語</td>
-        <td>日本語 (京都方言), 英語 (received pronunciation), ロシア語</td>
+        <td>日本語 (京都方言), 英語 (received pronunciation), ふらんす語</td>
       </tr>
       <tr>
         <th>主題色</th>
@@ -89,19 +97,19 @@ export default () => <>
       <tr>
         <th>服飾</th>
         <td>
-          素朴, 無彩, ピアス (<a href='https://twitter.com/enkaust/status/1239962725746454528'>耳</a>, <a href='https://en.wikipedia.org/wiki/Prince_Albert_(genital_piercing)'>prince albert</a>)
+          素朴, 無彩, ぴあす (<a href='https://twitter.com/enkaust/status/1239962725746454528'>耳</a>, <a href='https://en.wikipedia.org/wiki/Prince_Albert_(genital_piercing)'>prince albert</a>)
         </td>
         <td>(未定)</td>
       </tr>
       <tr>
         <th>趣味</th>
-        <td>映畫鑑賞, 筋力鍛錬</td>
         <td>讀書, 鋼琴</td>
+        <td>映畫鑑賞, 筋力鍛錬</td>
       </tr>
       <tr>
         <th>愛讀書</th>
         <td>«better never to have been»</td>
-        <td>«存在と無»</td>
+        <td>«l'être et le néant»</td>
       </tr>
       <tr>
         <th>性格</th>
@@ -123,8 +131,8 @@ export default () => <>
         <td>
           <ul>
             <li>自淫は平均1回/週</li>
-            <li>リバだが凹を好む</li>
-            <li>首を絞められたがる</li>
+            <li>可攻可受だが受くを好む</li>
+            <li>首を絞めらるを好む</li>
             <li>性行爲中は甘えたがり</li>
             <li>大麻とLSDを好む</li>
           </ul>
@@ -132,7 +140,7 @@ export default () => <>
         <td>
           <ul>
             <li>自淫は平均.5回/日</li>
-            <li>リバだが凹を好む</li>
+            <li>可攻可受だが受くを好む</li>
             <li>乳頭が弱い</li>
             <li>寂しがり</li>
             <li>酒精に弱い</li>
@@ -150,7 +158,7 @@ export default () => <>
     </p>
     <p>
       盈は社交的で學内に築いた多くの友人關係を樂しんでゐるが, 入り組んだ人間關係を器用に立ち回る事を煩はしく思ふ時が有る.
-      硯と會話を重ねる内 人に阿らない彼の態度を盈は憧れ混じりに好み始めた.
+      硯と會話を重ねる内に人に阿らない毅然とした彼の態度を盈は好み始めた.
     </p>
     <p>
       盈は多くの週末を硯の家で過ごす.
@@ -158,25 +166,21 @@ export default () => <>
       時にはそれぞれの專門である程序設計や數學の話をする.
     </p>
     <p>
-      夜は大抵 性交した後に同じ寢床で寢る.
+      夜は大抵, 性交した後に同じ寢床で寢る.
       本來は硯も盈も受けを望むが, 硯は攻めに回って盈を樂しませる事に吝かでない.
-      硯は年齢や學年に基づく上下關係と言った世俗には無緣だが, 盈に對しては甘やかす兄の樣な立場を取り勝ちである.
+      硯は年齢や學年に基づく上下關係と言った物に價値を認めないが, 盈に對しては甘やかす兄の樣な立場を取り勝ちである.
     </p>
     <p>
       盈が戀人を作り會ふ回數が少なくなる期間がしばしば有るが, 全く會はなくなるわけではない.
-      盈が樂しそうに惚氣る時 硯はそれを微笑ましく聞きそこに妬みは無い.
+      盈が樂しそうに惚氣けるのに耳を傾ける事を硯は嫌ってゐない.
       その間硯はいつもと特に變はらぬ性生活を送り多數の相手と性交する.
-    </p>
-    <p>
-      盈が戀人と別れると硯は表情などからそれを察する.
-      その樣な時 盈は何も言はずに硯に抱き着き甘えてき, 硯はそれを許す.
-      硯は盈が傷附く所を見たくないが, 多人數との肉體關係を嗜好する自分は盈が求めるmonoamory的な關係を與へられず, 同じ樣な事が起きる度に齒痒く思ふ.
     </p>
   </section>
 
   <section>
     <h3>ARTS</h3>
     <div className={style.tweets}>
+      <TwitterTweetEmbed tweetId='1548324710231916549' options={{ theme: "dark" }} />
       <TwitterTweetEmbed tweetId='1488869489685012485' options={{ theme: "dark" }} /> {/*<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【R-18🔞】skeb納品しました。リクエストありがとうございました！<a href="https://t.co/MUKQZBYvja">https://t.co/MUKQZBYvja</a> <a href="https://t.co/UlIjonaXpG">pic.twitter.com/UlIjonaXpG</a></p>&mdash; はいき｜𝗛𝗔𝗜𝗞𝗜 (@haiki396g) <a href="https://twitter.com/haiki396g/status/1488869489685012485?ref_src=twsrc%5Etfw">February 2, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>*/}
       <TwitterTweetEmbed tweetId='1479281810123390978' options={{ theme: "dark" }} /> {/*<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Skebありがとうございました！<a href="https://t.co/sdYui5BcE1">https://t.co/sdYui5BcE1</a><a href="https://twitter.com/hashtag/Skeb?src=hash&amp;ref_src=twsrc%5Etfw">#Skeb</a> <a href="https://t.co/nSLnroOfRg">pic.twitter.com/nSLnroOfRg</a></p>&mdash; ᴘᴏᴢᴏɴ²🔞 (@Pozonuun) <a href="https://twitter.com/Pozonuun/status/1479281810123390978?ref_src=twsrc%5Etfw">January 7, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>*/}
       <TwitterTweetEmbed tweetId='1454814733920464900' options={{ theme: "dark" }} /> {/*<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">急遽描いたものですがこれでゆるしてくｄさい <a href="https://t.co/RI31p4pqZN">pic.twitter.com/RI31p4pqZN</a></p>&mdash; 司ろう。 (@shi46_u) <a href="https://twitter.com/shi46_u/status/1454814733920464900?ref_src=twsrc%5Etfw">October 31, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>*/}
